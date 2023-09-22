@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { signup } from '../../redux/actions/authActions';
 import { signup } from '../redux/action';
 import { useNavigate } from 'react-router-dom';
+import './Signup.css';
 
 function Signup() {
   const dispatch = useDispatch();

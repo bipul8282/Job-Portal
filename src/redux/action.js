@@ -1,15 +1,14 @@
-// Sample auth actions (you'll need to implement actual API calls)
+
 import yourApiService from './yourApiServices'; 
  const login = (formData) => {
     return async (dispatch) => {
       try {
-        // Implement login logic here (e.g., make an API request to authenticate the user)
+       
         
-        // If login is successful, you can dispatch a success action with user data
-        const user = await yourApiService.login(formData); // Replace with your actual login API call
+        const user = await yourApiService.login(formData); 
         dispatch(loginSuccess(user));
       } catch (error) {
-        // If login fails, dispatch a failure action with an error message
+       
         dispatch(loginFailure(error));
       }
     };
@@ -18,21 +17,21 @@ import yourApiService from './yourApiServices';
   const signup = (formData) => {
     return async (dispatch) => {
       try {
-        // Implement signup logic here (e.g., make an API request to create a new user)
         
-        // If signup is successful, you can dispatch a success action with user data
-        const user = await yourApiService.signup(formData); // Replace with your actual signup API call
+        
+        
+        const user = await yourApiService.signup(formData); 
         console.log(user)
         dispatch(signupSuccess(user));
         
       } catch (error) {
-        // If signup fails, dispatch a failure action with an error message
+        
         dispatch(signupFailure(error));
       }
     };
   };
   
-  // Action creators for success and failure
+  
   const loginSuccess = (user) => {
     return {
       type: 'LOGIN_SUCCESS',
@@ -88,8 +87,8 @@ const getJobDetails = (jobId) => {
     try {
       dispatch(getJobDetailsRequest());
 
-      // Implement the logic to fetch job details from your API
-      const job = await yourApiService.getJobDetails(jobId); // Replace with your actual API call
+      
+      const job = await yourApiService.getJobDetails(jobId); 
 
       dispatch(getJobDetailsSuccess(job));
     } catch (error) {

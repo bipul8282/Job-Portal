@@ -11,6 +11,7 @@ function Login() {
     email: '',
     password: '',
   });
+  const [user,setUser] = useState();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,12 +21,13 @@ function Login() {
     try{
       e.preventDefault();
     dispatch(login(formData));
+    
+    const setUser = localStorage.setItem("user", JSON.stringify(user));
     console.log("user")
-    const setuser = localStorage.setItem("user", JSON.stringify())
     navigate('/home')
     } catch(error){
       console.error(error)
-    } // Dispatch login action here
+    } 
   };
 
   return (

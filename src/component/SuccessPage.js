@@ -11,7 +11,7 @@ function SuccessPage() {
       <p>Name: {applicationData.name}</p>
       <p>Email: {applicationData.email}</p>
       <p>Cover Letter: {applicationData.coverLetter}</p>
-      {/* Display additional application data here */}
+      
     </div>
   );
 }

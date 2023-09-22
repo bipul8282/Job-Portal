@@ -1,14 +1,14 @@
-// Sample auth reducer (initial state, actions, and state mutations)
+
 const initialState = {
-    user: null,            // Represents the authenticated user (null if not logged in)
-    isAuthenticated: false, // Indicates whether the user is authenticated or not
-    loading: false,        // Indicates whether authentication-related operations are in progress
-    error: null,           // Stores any authentication-related error messages
+    user: null,            
+    isAuthenticated: false, 
+    loading: false,        
+    error: null,           
   };
   
   const authReducers = (state = initialState, action) => {
     switch (action.type) {
-      // Implement authentication-related actions and state mutations here
+      
       case 'LOGIN_SUCCESS':
         return {
           ...state,
@@ -36,8 +36,7 @@ const initialState = {
           error: null,
         };
   
-      // Add cases for other authentication-related actions as needed
-  
+     
       default:
         return state;
     }

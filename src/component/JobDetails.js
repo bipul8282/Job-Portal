@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {  getJobDetails} from '../redux/action'; // Adjust the import path
+import {  getJobDetails} from '../redux/action'; 
 
 function JobDetails({ match }) {
   const jobId = match.params.id;
